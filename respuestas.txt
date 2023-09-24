@@ -1,0 +1,16 @@
+¿Qué problemas se puede ver a simple vista?
+
+Se puede apreciar a simple vista que cada ejecución del código es diferente, en algunas solo
+"come hamburguesa" el 1 hilo, en otras el hilo 0 y 1, y en otras se 
+pisan sobre la misma hamburguesa.
+
+
+
+¿Qué nombre se le dá a esta falla que ocurre en el código que provoca 
+que cada ejecución presente resultados diferentes?
+
+Lo que le sucede al programa es que tiene una "race condition" o condición de carrera,
+donde el proceso tiene una región critica que utilizan los dos hilos, provocando esta falla.
+La solución sería generar una exclusión mutua entre los hilos, para que se turnen en ingresar
+a la región critica.
+
